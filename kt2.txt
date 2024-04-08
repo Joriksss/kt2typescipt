@@ -1,0 +1,252 @@
+class Library{
+
+
+ 
+
+}
+
+
+ 
+
+abstract class Publisher {
+
+    constructor(
+
+    public title: string,
+
+    public author: string,
+
+    public pubYear: number,
+
+    public copies: number,
+
+    ){}
+
+}
+
+
+ 
+
+class GetPub extends Publisher{
+
+
+ 
+
+    getTitle(): string {
+
+        return this.title;
+
+    }
+
+
+ 
+
+    getAuthor(): string {
+
+        return this.author;
+
+    }
+
+
+ 
+
+    getPubYear(): number{
+
+        return this.pubYear;
+
+    }
+
+
+ 
+
+    getCopies(): number {
+
+        return this.copies;
+
+    }
+
+   
+
+}
+
+
+ 
+
+class ChangePub extends GetPub{
+
+
+ 
+
+    setTitle(title: string): void {
+
+        this.title = title;
+
+    }
+
+
+ 
+
+    setAuthor(author: string): void {
+
+        this.author = author;
+
+    }
+
+
+ 
+
+    setPubYear(pubYear: number): void {
+
+        this.pubYear = pubYear;
+
+    }
+
+
+ 
+
+    setCopies(copies: number): void {
+
+        this.copies = copies;
+
+    }
+
+}
+
+
+ 
+
+class Book extends Publisher {
+
+   
+
+    constructor(
+
+        title: string,
+
+        author: string,
+
+        pubYear: number,
+
+        copies: number,
+
+        public pages: number)
+
+        {
+
+        super(title, author, pubYear, copies, pages);
+
+        }
+
+   
+
+}
+
+
+ 
+
+class Magazine extends Publisher{
+
+    constructor(
+
+        title: string,
+
+        author: string,
+
+        pubYear: number,
+
+        copies: number,
+
+        public issue: number)
+
+        {
+
+        super(title, author, pubYear, copies, pages);
+
+        }
+
+}
+
+
+ 
+
+interface Reception {
+
+
+ 
+
+}
+
+
+ 
+
+class Reader {
+
+    firstName: string
+
+    lastName: string
+
+    items: string
+
+}
+
+
+ 
+
+class GetReader extends Reader{
+
+    getFirstName(): string {
+
+        return this.firstName;
+
+    }
+
+    getLastName(): string {
+
+        return this.lastName;
+
+    }
+
+    getItems(): string {
+
+        return this.items;
+
+    }
+
+}
+
+
+ 
+
+class ChangeReader extends GetReader{
+
+    setFirstName(firstName: string): void {
+
+        this.firstName = firstName;
+
+    }
+
+   
+
+    setLastName(lastName: string): void {
+
+        this.lastName = lastName;
+
+    }
+
+
+ 
+
+    setItems(items: string): void {
+
+        this.items = items;
+
+    }
+
+}
+
+
+ 
+
+const books = new Book("Bookname", "I.G", 2002, 5);
+
+const magazines = new Magazine("MagazineName" "P.I", 1989, 1);
